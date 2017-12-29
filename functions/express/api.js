@@ -51,7 +51,7 @@ app.use(cors);
 app.use(cookieParser);
 // app.use(validateFirebaseIdToken);
 
-// https://...cloudfunctions.net/expressApp/expressTime
+// https://...cloudfunctions.net/api/expressTime
 app.get('/expressTime', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ timestamp: Date.now(), humanReadable: (new Date()).toString() }));

@@ -16,11 +16,10 @@ const importFromDir = dirname => {
   })
 }
 
-if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'expressApi') {
-  // the expressApi part will be in tue URL.
-  exports.expressApi = require('./express');
-}
+importFromDir(`express`)
 
 importFromDir(`databaseTriggers`)
 
 importFromDir(`httpRequests`)
+
+importFromDir(`typeScript/lib`)
